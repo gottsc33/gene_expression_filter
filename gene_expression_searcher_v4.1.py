@@ -157,9 +157,6 @@ exp_data.close()
 #Setting additional filtering for select pairwise comparisons
 comparison_matches = []
 #User must define the comparison list below are the two need for the Gala & HC Transcriptomes
-#comparison_list = ['NTFB\tTFB','NT15\tT15','NT35\tT35','NT50\tT50','NT70\tT70'] #honeycrisp
-#comparison_list = ['TFB\tT15','T15\tT35','T35\tT50','T50\tT70'] #honeycrisp initiating apices
-#comparison_list = ['GA1DAT\tC1DAT','GA2DAT\tC2DAT','GA5DAT\tC5DAT','GA15DAT\tC15DAT'] #gala
 comparison_list = raw_input("\n Please input all comparisons your would like to retrieve as written in cuffdiff ouput. example input format (include '' and regex tabs ) ex. 'Control'\t'Treatment1, 'Control'\t'Treatment2' - press 'Enter when complete': ")
 print("\n Thank you for entering comparisons, reading in temp file now...")
 temp_in = open('gene_expression_searcher.temp', 'r')
