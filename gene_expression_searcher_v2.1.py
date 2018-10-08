@@ -56,9 +56,9 @@ exp_data.close()
 
 #Setting additional filtering for select pairwise comparisons
 comparison_matches = []
-#User must define the comparison list below are the two need for the Gala & HC Transcriptomes
-#comparison_list = ['NTFB\tTFB','NT15\tT15','NT35\tT35','NT50\tT50','NT70\tT70'] #honeycrisp
-comparison_list = ['GA1DAT\tC1DAT','GA2DAT\tC2DAT','GA5DAT\tC5DAT','GA15DAT\tC15DAT'] #gala
+#User must define the comparison list below 
+#comparison_list = ['contol\ttrt1','control\ttrt2] 
+comparison_list = ['contol\ttrt1','control\ttrt2] #user please edit for your use
 temp_in = open('gene_expression_searcher.temp', 'r')
 
 with temp_in as non_compare:
