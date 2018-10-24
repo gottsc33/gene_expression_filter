@@ -23,6 +23,7 @@
 import sys
 import os
 import time
+import tqdm
 
 #loading in target gene file
 
@@ -105,7 +106,7 @@ This software can be used to quickly parse cufflinks outputs to generate files t
 NOTE: All paths for input files must be manually entered, unix autofill is not compatible.
 """
 print(Welcome)
-in_name = raw_input("\n Please type in the $PATH to your target transcript sequence ID file and press 'Enter': ")
+in_name = input("\n Please type in the $PATH to your target transcript sequence ID file and press 'Enter': ")
 assert os.path.exists(in_name), "I did not find the file at, "+str(in_name)
 in_gene = open(in_name, "r")
 print("\n Your input file has been found and is loading...")
@@ -121,7 +122,7 @@ print("\n Input sequence IDs indexed...")
 #reading in cuffdiff output
 
 matches = []
-cuffdiff_in = raw_input("\n Please type in the $PATH to your cuffdiff output file and press 'Enter':")
+cuffdiff_in = input("\n Please type in the $PATH to your cuffdiff output file and press 'Enter':")
 assert os.path.exists(cuffdiff_in), "I did not find the file at, "+str(cuffdiff_in)
 exp_data = open(cuffdiff_in, "r")
 print("\n Your cuffdiff file has been found and is loaded, search starting...")
@@ -147,7 +148,7 @@ exp_data.close()
 #Setting additional filtering for select pairwise comparisons
 comparison_matches = []
 #User must define the comparison list below are the two need for the Gala & HC Transcriptomes
-comparison_list = raw_input("\n Please input all comparisons your would like to retrieve as written in cuffdiff ouput. example input format (include '' and regex tabs) - 'Control\tTreatment1, 'Control\tTreatment2' - press 'Enter when complete': ")
+comparison_list = input("\n Please input all comparisons your would like to retrieve as written in cuffdiff ouput. example input format (include '' and regex tabs) - 'Control\tTreatment1, 'Control\tTreatment2' - press 'Enter when complete': ")
 print("\n Thank you for entering comparisons, reading in temp file now...")
 temp_in = open('gene_expression_searcher.temp', 'r')
 
